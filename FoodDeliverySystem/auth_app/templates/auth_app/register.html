@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <style>
+    * {
+  padding: 0px;
+  margin: 0px;
+  }
+
+  body {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .logo {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 50px;
+    font-family: Caveat Brush;
+    font-size: 96px;
+
+    background: -webkit-linear-gradient(#a1f2df 26.38%, #ff0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .container {
+    position: absolute;
+    width: 600px;
+    height: 800px;
+    margin-left: 420px;
+    margin-top: 182px;
+
+    background: #f7f7f7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+  }
+
+ input[type="text"] {
+   padding:10px;
+   width: 540px;
+  height: 30px;
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.1em;
+    background: #ffffff;
+    border-radius: 10px;
+    border: none;
+  }
+
+  input[type="email"] {
+   padding:10px;
+   width: 540px;
+  height: 30px;
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.1em;
+    background: #ffffff;
+    border-radius: 10px;
+    border: none;
+  }
+
+  input[type="password"] {
+   padding:10px;
+   width: 540px;
+  height: 30px;
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.1em;
+    background: #ffffff;
+    border-radius: 10px;
+    border: none;
+  }
+
+  ::placeholder {
+    opacity: 50%;
+  }
+
+  .username {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-1 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 90px;
+  }
+
+  .email {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 180px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-2 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 230px;
+  }
+
+  .password1 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 320px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-3 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 370px;
+  }
+
+  .password2 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 460px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-4 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 520px;
+  }
+
+  .btn1 {
+    position: absolute;
+    width: 540px;
+    height: 80px;
+    margin-left: 30px;
+    margin-top: 620px;
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+    background: #000000;
+    border-radius: 15px;
+    border: none;
+  }
+
+  .btn1:hover {
+    color: black;
+    background: #70bae7;
+  }
+
+  .p-1 {
+    position: absolute;
+    margin-left: 147px;
+    margin-top: 712px;
+    font-size: 24px;
+    display: flex;
+  }
+
+  .link {
+    position: absolute;
+    margin-left: 233px;
+    margin-top: 751px;
+    font-size: 24px;
+    display: flex;
+    text-decoration-line: underline;
+    color: black;
+  }
+
+  .link:hover {
+    color: #70bae7;
+  }
+
+  .first_name {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 100px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-5 {
+    position: absolute;
+    width: 260px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 160px;
+  }
+
+  .last_name {
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 100px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-6 {
+    position: absolute;
+    width: 260px;
+    height: 50px;
+    margin-left: 310px;
+    margin-top: 160px;
+  }
+
+  .phone {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 250px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-7 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 300px;
+  }
+
+  .address {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 400px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .box-8 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 450px;
+  }
+
+  .btn2 {
+    position: absolute;
+    width: 540px;
+    height: 80px;
+    margin-left: 30px;
+    margin-top: 620px;
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+    background: #000000;
+    border-radius: 15px;
+    border: none;
+  }
+
+  .btn2:hover {
+    color: black;
+    background: #70bae7;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h1 class="logo"><a href="{% url 'home' %}">Deliver</a></h1>
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}  
+          {{ wizard.management_form }}
+            {% if wizard.steps.step1 == 1 %}
+              <label class="username">
+                Username
+              </label>
+              <p class="box-1" type="text" placeholder="Harshad347">{{wizard.form.username}}</p>
+              <label class="email">
+                Email
+              </label>
+              <p class="box-2" type="email" placeholder="harshaddukare347@gmail.com">{{wizard.form.email}}</p>
+              <label class="password1">
+                Password
+              </label>
+              <p class="box-3" type="password" placeholder="••••••••••">{{wizard.form.password1}}</p>
+              <label class="password2">
+                Password Confirmation
+              </label>
+              <p class="box-4" type="password" placeholder="••••••••••">{{wizard.form.password2}}</p>
+              <button class="btn1" type="submit">Sign in</button>
+              <p class="p-1">Already have an account?</p>
+              <a class="link" href="{% url 'login' %}"><b>Login here.</b></a>
+            {% endif %}
+
+            {% if wizard.steps.step1 == 2 %}
+              <label class="first_name">
+                First name
+              </label>
+              <p class="box-5" placeholder="Harshad">{{wizard.form.first_name}}</p>
+              <label class="last_name">
+                Last name
+              </label>
+              <p class="box-6" placeholder="Dukare">{{wizard.form.last_name}}</p>
+              <label class="phone">
+                Phone No.
+              </label>
+              <p class="box-7" type="text" placeholder="9876543210">{{wizard.form.phone}}</p>
+              <label class="address">
+                Address
+              </label>
+              <p class="box-8" placeholder="New York City">{{wizard.form.address}}</p>
+              <button class="btn2" type="submit">Submit</button>
+            {% endif %}
+        </form>
+    </div>
+  </div>
+</body>
+</html>
