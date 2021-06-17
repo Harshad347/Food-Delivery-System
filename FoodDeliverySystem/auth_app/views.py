@@ -17,8 +17,12 @@ def home(request):
     return render(request, 'auth_app/home.html')
 
 
-class FormWizardView(SessionWizardView):
-    template_name = "auth_app/register.html"
+def about(request):
+    return render(request, 'auth_app/about.html')
+
+
+class CFormWizardView(SessionWizardView):
+    template_name = "auth_app/c_register.html"
     form_list = [CustomerRegisterForm, CustomerDetailsForm]
     file_storage = FileSystemStorage(location=os.path.join(
         settings.MEDIA_ROOT, 'images/profile_pics'))
@@ -49,3 +53,36 @@ class FormWizardView(SessionWizardView):
             profile_pic=detail_form['profile_pic'],
         )
         customer.save()
+
+
+class RFormWizardView(SessionWizardView):
+    template_name = "auth_app/r_register.html"
+    form_list = [RestaurantRegisterForm, RestaurantDetailsForm]
+    file_storage = FileSystemStorage(location=os.path.join(
+        settings.MEDIA_ROOT, 'images/resto_pics'))
+
+    def done(self, form_list, form_dict, **kwargs):
+        register_form = form_dict['0'].cleaned_data
+        detail_form = form_dict['1'].cleaned_data
+        user = self.create_user(register_form)
+        self.create_restaurant(detail_form, user)
+        return redirect('login')
+
+    def create_user(self, register_form):
+        user = User(
+            username=register_form['username'],
+            email=register_form['email'],
+        )
+        user.set_password(register_form['password1'])
+        user.save()
+        return user
+
+    def create_restaurant(self, detail_form, user):
+        restaurant = Restaurant(
+            user=user,
+            resto_name=detail_form['resto_name'],
+            resto_phone=detail_form['resto_phone'],
+            resto_address=detail_form['resto_address'],
+            resto_pic=detail_form['resto_pic'],
+        )
+        restaurant.save()

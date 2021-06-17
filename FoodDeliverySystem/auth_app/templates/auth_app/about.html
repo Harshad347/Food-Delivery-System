@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>About us</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,47 +15,27 @@
 }
 
 .top-bar {
-  width: 1440px;
-  height: 250px;
-  background-color: #4c4e4c;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-  font-family: Montserrat;
-}
+    position: relative;
+width: 1440px;
+height: 100px;
 
-.c-login {
-  position: absolute;
-  color: white;
-  margin-left: 299px;
-  margin-top: 103px;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 36px;
-  text-decoration-line: underline;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
   position: absolute;
-  margin-left: 601px;
-  margin-top: 64px;
+  margin-left: 120px;
+  margin-top: 0px;
   font-family: Caveat Brush;
   font-style: normal;
   font-weight: 400;
-  font-size: 96px;
+  font-size: 72px;
+line-height: 91px;
 
   background: -webkit-linear-gradient(#a1f2df 26.38%, #ff0000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.r-login {
-  position: absolute;
-  color: white;
-  margin-left: 869px;
-  margin-top: 103px;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 36px;
-  text-decoration-line: underline;
 }
 
 .sec-1 {
@@ -311,11 +292,9 @@
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <a class="c-login" href="{% url 'c_register' %}">For Customers</a>
-        <h1 class="logo">Deliver</h1>
-        <a class="r-login" href="{% url 'r_register' %}">For Restaurants</a>
-    </div>
+  <div class="top-bar">
+    <h1 class="logo">Deliver</h1>
+</div>
     <div class="sec-1">
         <img class="cover-page" src="/static/images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg" alt="">
         <h2 class="p-1">Hungry?!</h2>
@@ -330,7 +309,7 @@
         <h1 class="logo-2">Deliver</h1>
         <p class="p-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <h5 class="h-1"><b>Quick Links</b></h5>
-        <a class="link-1" href="{% url 'home' %}">Home</a>
+        <a class="link-1" href="{% url 'index' %}">Home</a>
         <a class="link-2" href="">Restaurants</a>
         <a class="link-3" href="{% url 'about' %}">About us</a>
         <h5 class="h-2"><b>Contact us</b></h5>
